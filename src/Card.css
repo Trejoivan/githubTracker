@@ -1,0 +1,60 @@
+.img {
+  max-width: 15rem !important;
+  max-height: 15rem !important;
+}
+
+.data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  max-width: 15rem;
+  margin-top: 2rem;
+  background-image: url("https://mcdn.wallpapersafari.com/medium/83/45/Ju31Or.jpg") !important;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.button {
+  background-color: black !important;
+  color: white !important;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+  height: 18rem;
+}
+.card-img-top{
+  width: 4rem
+}
+
+
+.button:hover {
+  background-image: url("https://media1.giphy.com/media/JQpH25Y6TrRQwtF0KY/200.gif") !important;
+  background-position: center;
+  color: white !important;
+}
+
+.list-card {
+  background-color: #644e4738;
+  text-decoration: none;
+  height: 10rem;
+}
+
+.list-card:hover {
+  background-image: url("https://media1.giphy.com/media/JQpH25Y6TrRQwtF0KY/200.gif") !important;
+  background-position: center;
+}
+
+.card-body {
+  margin: 0;
+
+}
+
+.card-img-top {
+  background-color: white;
+}
