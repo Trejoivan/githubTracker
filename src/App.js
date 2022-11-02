@@ -17,21 +17,24 @@ function App() {
     
   }, []);
 
+
   const fetchData = () => {
 
-    setUserData(testData)
+    // setUserData(testData)
     /////////////////// (GitHub API) //////////////////////////
-    // Axios.get('https://api.github.com/repos/Trejoivan/Strongest-link-social/contributors').then((response) => {
-    //   setUserData(response['data']);
-    // }).catch((error) => {
-    //   console.error(error);
-    // });
+    Axios.get('https://api.github.com/repos/Trejoivan/Strongest-link-social/commits').then((response) => {
+      setUserData(response['data']);
+    }).catch((error) => {
+      console.error(error);
+    });
   };
+
 
   const renderPages = () => {
     let cardHolder = []
     console.log('hi')
     console.log(userData);
+
 
     if (userData.length > 1) {
       console.log('bye')
@@ -41,10 +44,30 @@ function App() {
       console.log(cardHolder)
       setUserCards(cardHolder)
     }
+    let personDict = {
 
+    }
+    
+
+
+
+    for (let i = 0; i < userData.length; i++) {
+      console.log('the user')
+
+      let person = userData[i]['commit']['author']['name']
+      if (person in personDict){
+        personDict[person] += 1
+      }
+      else {
+        personDict[person] = 1
+      }
+    }
+    console.log(personDict)
 
   }; 
-  console.log(userData[0]['login']);
+
+  
+
 
   return (
     <div className="App">
